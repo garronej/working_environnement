@@ -149,6 +149,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 HISTSIZE=6000
 
+finda() {
+    #do things with parameters like $1 such as
+    find . -type f -exec grep -li $1 {} +
+
+}
+
 
 #persononnel@dolpin.fr
 export EDITOR=vim
