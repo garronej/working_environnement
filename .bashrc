@@ -149,28 +149,22 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 HISTSIZE=6000
 
-finda() {
-    #do things with parameters like $1 such as
+scan() {
     find . -type f -exec grep -li $1 {} +
-
 }
 
-
-#persononnel@dolpin.fr
 export EDITOR=vim
-#VIMRUNTIME=/usr/share/vim/vim73
 
-# User specific environment and startup programs
+pushd . > /dev/null
+DIR="${BASH_SOURCE[0]}";
+while([ -h "${SCRIPT_PATH}" ]); do
+    cd "`dirname "${SCRIPT_PATH}"`"
+    DIR="$(readlink "`basename "${SCRIPT_PATH}"`")";
+done
+cd "`dirname "${SCRIPT_PATH}"`" > /dev/null
+DIR="`pwd`";
+popd  > /dev/null
 
 
-
-
-export CUP=$HOME/tooljava/cup
-
-
-export PATH=$CUP/java_cup:$PATH
-export CLASSPATH=$CUP:$CLASSPATH
-
-export PATH=/home/pi/.npm-global/bin:$PATH
-
+export PATH=$DIR/.npm-global/bin:$PATH
 
