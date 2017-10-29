@@ -1,2 +1,5 @@
 # working_environement
-My vim plugins, vimrc and bashrc
+Deploy by running:
+````bash
+$ sudo ./apply.sh
+````
