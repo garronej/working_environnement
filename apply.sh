@@ -5,10 +5,10 @@ USER=$(who am i | awk '{print $1}')
 eval cd ~$USER
 HOME=$(pwd)
 
-#apt-get update 
-#apt-get --yes install aptitude
-#aptitude -y install vim
-#aptitude -y install git
+apt-get update 
+apt-get --yes install aptitude
+aptitude -y install vim
+aptitude -y install git
 
 git config --global user.email "joseph.garrone.gj@gmail.com"
 
