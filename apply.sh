@@ -12,12 +12,6 @@ aptitude -y install git
 
 git config --global user.email "joseph.garrone.gj@gmail.com"
 
-cd $DIR/.vim/bundle
-
-rm -rf nerdtree
-git clone https://github.com/scrooloose/nerdtree
-chown -R $USER:$USER nerdtree
-
 cd $HOME
 
 rm -rf .vim .bashrc .vimrc
