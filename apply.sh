@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-USER=$(who am i | awk '{print $1}')
+USER=$(ls -l `tty` | awk '{print $3}')
 eval cd ~$USER
 HOME=$(pwd)
 
