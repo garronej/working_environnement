@@ -6,6 +6,8 @@ $ sudo ./apply.sh
 
 On mac:
 
+NEW: you can run: sudo ./apply_mac.sh
+
 Main user group is staff
 
 bash configuration file is loaded from .bash_profile instead of .bashrc
